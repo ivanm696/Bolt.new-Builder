@@ -109,4 +109,4 @@ pnpm run deploy
 ```
 
 Make sure you have the necessary permissions and Wrangler is correctly configured for your Cloudflare account.
-
+# dependabot/npm_and_yarn/npm_and_yarn-226995c71a
