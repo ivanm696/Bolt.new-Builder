@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'  # Обновили до Node 24, чтобы убрать варнинги депрекации
           cache: 'pnpm'
 
       - name: Install dependencies
@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }} # Проверь этот секрет в настройках GitHub!
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: x-builder
           directory: build/client
